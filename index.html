@@ -1,67 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gelatos Delícia</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gelato Gourmet</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Descubra o verdadeiro sabor do gelato!</h1>
-        <nav>
-            <a href="#sabores">Sabores</a>
-            <a href="#novidades">Novidades</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
 
-    <section id="sabores" class="gelatos">
-        <h2>Gelatos</h2>
-        <p>Sabores exclusivos e artesanais</p>
-        <div class="galeria">
-            <img src="https://i.imgur.com/v4bWwRm.png" alt="Chocolate" class="flutuante">
-            <img src="https://i.imgur.com/rBQkXla.png" alt="Morango" class="flutuante">
-            <img src="https://i.imgur.com/9v7uE3X.png" alt="Baunilha" class="flutuante">
-        </div>
-    </section>
+  <!-- ======= CABEÇALHO ======= -->
+  <header>
+    <div class="logo"><img src="img/Logo (2).jpeg"></div>
+    <nav>
+      <a href="#inicio">GELATO</a>
+      <a href="#quemsomos">QUEM SOMOS</a>
+      <a href="#novidades">NOVIDADES</a>
+      <a href="#contato">CONTATO</a>
+      <span class="cart">🛒</span>
+    </nav>
+  </header>
 
-    <section id="novidades" class="novidades">
-        <h2>Novidades</h2>
-        <div class="produtos">
-            <div class="card">
-                <img src="https://i.imgur.com/kOXE5lC.png" alt="Pote 1">
-                <p>Gelato de Pistache</p>
-            </div>
-            <div class="card">
-                <img src="https://i.imgur.com/ljzLbBh.png" alt="Pote 2">
-                <p>Gelato de Frutas Vermelhas</p>
-            </div>
-            <div class="card">
-                <img src="https://i.imgur.com/zx8e7lD.png" alt="Pote 3">
-                <p>Gelato de Coco</p>
-            </div>
-        </div>
-    </section>
+  <!-- ======= INÍCIO ======= -->
+  <section id="inicio" class="inicio">
+    <div class="texto">
+      <h2>Descubra o verdadeiro sabor do gelato</h2>
+      <p>Feito com ingredientes selecionados,<br>diretamente para o seu paladar</p>
+    </div>
+  </section>
 
-    <section id="contato" class="contato">
-        <h2>Contato</h2>
-        <p>Visite-nos ou envie uma mensagem!</p>
-        <form>
-            <input type="text" placeholder="Seu nome" required>
-            <input type="email" placeholder="Seu email" required>
-            <textarea placeholder="Mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-        <div class="mapa">
-            <img src="https://i.imgur.com/4bWOk5P.png" alt="Mapa da loja">
-        </div>
-    </section>
+  <!-- ======= SABORES ======= -->
+  <section id="sabores" class="sabores">
+    <h2>Gelatos</h2>
 
-    <footer>
-        <p>© 2025 Gelatos Delícia - Todos os direitos reservados</p>
-    </footer>
+    <h3>Sabores Tradicionais</h3>
+    <div class="sabores-grid">
+      <div class="sabor"><img src="img/sorvetes.jpeg"><p>Romeu e Julieta</p></div>
+    </div>
 
-    <script src="script.js"></script>
+    <h3>Sabores Alcoólicos</h3>
+    <div class="sabores-grid">
+      <img src="https://images.unsplash.com/photo-1628171005841-6f27e7f8e4cb?auto=format&fit=crop&w=400&q=80" alt="Gelato alcoólico">
+    </div>
+
+    <h3>Sabores Infantis</h3>
+    <div class="sabores-grid">
+      <div class="sabor"><img src="img/confete.jpeg"><p>Confete</p></div>
+      <div class="sabor"><img src="img/unicorn.jpeg"><p>Unicorn</p></div>
+      <div class="sabor"><img src="img/algodão.jpeg"><p>Algodão Doce</p></div>
+      <div class="sabor"><img src="img/chocolate.jpeg"><p>Chocolate c/ M&M</p></div>
+      <div class="sabor"><img src="img/napolitano.jpeg"><p>Napolitano</p></div>
+    </div>
+  </section>
+
+  <!-- ======= QUEM SOMOS ======= -->
+  <section id="quemsomos" class="sobre">
+    <h2>Desde 2025<br>Gelatos</h2>
+    <p>Gelatos artesanais feitos com ingredientes selecionados para transformar cada momento em algo especial.
+      Oferecemos combinações clássicas e criações exclusivas para agradar todos os paladares, sempre com um toque italiano.</p>
+    <img src="https://images.unsplash.com/photo-1529946825183-b39a99f1322e?auto=format&fit=crop&w=900&q=80" alt="Gelato artesanal">
+  </section>
+
+  <!-- ======= NOVIDADES ======= -->
+  <section id="novidades" class="novidades">
+    <h2>Novidades</h2>
+    <p>Novos sabores chegam todo mês! Acompanhe nossas redes sociais para não perder nenhuma delícia.</p>
+    <img src="https://images.unsplash.com/photo-1627497593598-cdd0f4b142f2?auto=format&fit=crop&w=900&q=80" alt="Novos sabores">
+  </section>
+
+  <!-- ======= CONTATO ======= -->
+  <section id="contato" class="contato">
+    <h2>Contato</h2>
+    <p>📍 Rua do Sabor, 123 - São Paulo/SP</p>
+    <p>📞 (11) 99999-9999</p>
+    <p>📧 contato@gelatogourmet.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Gelato Gourmet | Todos os direitos reservados 🍨</p>
+  </footer>
+
 </body>
 </html>

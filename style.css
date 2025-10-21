@@ -1,118 +1,186 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, #c9eaff, #ffe4f0);
-    color: #333;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
 }
 
+/* ===== CABEÇALHO ===== */
 header {
-    background: #fddde6;
-    text-align: center;
-    padding: 30px 20px;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
-header h1 {
-    color: #444;
-    margin-bottom: 10px;
+.logo img {
+  width: 100px;      /* tamanho da logo */
+  height: auto;      /* mantém proporção */
+  display: block;
 }
 
 nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #5a5a5a;
-    font-weight: bold;
-    transition: 0.3s;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
 }
 
 nav a:hover {
-    color: #ff6fa1;
+  color: #ff8fab;
 }
 
-.gelatos, .novidades, .contato {
-    text-align: center;
-    padding: 50px 20px;
+.cart {
+  margin-left: 10px;
 }
 
-.galeria {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 30px;
+/* ===== SEÇÕES ===== */
+section {
+  padding: 100px 50px;
+  text-align: center;
 }
 
-.galeria img {
-    width: 150px;
-    transition: transform 0.3s;
+/* ===== INÍCIO ===== */
+.inicio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #fdf3f6;
+  min-height: 100vh;
 }
 
-.galeria img:hover {
-    transform: scale(1.1);
+.inicio .texto {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
 }
 
-.novidades .produtos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+.inicio h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  color: #ff8fab;
 }
 
-.card {
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 200px;
-    padding: 20px;
+.inicio p {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-.card img {
-    width: 100%;
-    border-radius: 15px;
+.inicio .imagens {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.contato form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin: 30px auto;
-    width: 300px;
+.inicio img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
+/* ===== SABORES ===== */
+.sabores {
+  background: #fff;
 }
 
-button {
-    background: #ff6fa1;
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 20px;
-    cursor: pointer;
+.sabores h2 {
+  color: #87cefa;
+  font-family: 'Dancing Script', cursive;
+  font-size: 38px;
 }
 
-button:hover {
-    background: #ff8fbf;
+.sabores-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
 }
 
-.mapa img {
-    margin-top: 30px;
-    width: 300px;
-    border-radius: 15px;
+.sabor img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+.sabor p {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* ===== SOBRE ===== */
+.sobre {
+  background: #fdf3f6;
+}
+
+.sobre h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #ff8fab;
+  font-size: 36px;
+}
+
+.sobre img {
+  width: 80%;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== NOVIDADES ===== */
+.novidades img {
+  width: 80%;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== CONTATO ===== */
+.contato {
+  background: #87cefa20;
+}
+
+.contato h2 {
+  color: #87cefa;
+  font-family: 'Dancing Script', cursive;
+}
+
+/* ===== RODAPÉ ===== */
 footer {
-    background: #fddde6;
-    text-align: center;
-    padding: 20px;
-    color: #555;
+  background: #87cefa;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .inicio {
+    flex-direction: column;
+  }
+
+  .inicio .imagens img {
+    width: 200px;
+    height: 200px;
+  }
 }
