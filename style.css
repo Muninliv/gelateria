@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #c9eaff, #ffe4f0);
+    color: #333;
+}
+
+header {
+    background: #fddde6;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #5a5a5a;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff6fa1;
+}
+
+.gelatos, .novidades, .contato {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.galeria img {
+    width: 150px;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+}
+
+.novidades .produtos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 200px;
+    padding: 20px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 30px auto;
+    width: 300px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #ff6fa1;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff8fbf;
+}
+
+.mapa img {
+    margin-top: 30px;
+    width: 300px;
+    border-radius: 15px;
+}
+
+footer {
+    background: #fddde6;
+    text-align: center;
+    padding: 20px;
+    color: #555;
+}
