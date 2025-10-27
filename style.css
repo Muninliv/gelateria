@@ -16,7 +16,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  /* padding: 15px 50px; */
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   z-index: 1000;
 }
@@ -102,6 +102,13 @@ section {
   font-size: 38px;
 }
 
+.sabor-tradicional {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
 .sabores-grid {
   display: flex;
   flex-wrap: wrap;
