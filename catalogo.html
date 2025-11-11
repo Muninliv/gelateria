@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelato Gourmet - Catálogo</title>
+    <link rel="stylesheet" href="catalogo.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+    <header class="main-header">
+        <div class="header-logo">Gelato GOURMET</div>
+        <nav class="header-nav">
+            <a href="#sabores">Sabores</a>
+            <a href="#novidades">Novidades</a>
+            <a href="#contato">Contato</a>
+            <a href="login.html">Área ADM</a> 
+        </nav>
+        <div class="social-icons">
+            <a href="#"><img src="img/usuario.png" alt="Instagram"></a>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2 class="title-cursive">Descubra o verdadeiro sabor do gelato</h2>
+            <p>Frio e cremoso, ingredientes selecionados, feito com carinho, pensando em você. Não perca tempo, venha nos visitar!</p>
+            <div class="hero-image-placeholder">
+                [Imagem de Gelato Pote 1]
+                [Imagem de Gelato Pote 2]
+            </div>
+        </div>
+    </section>
+
+    <section class="adm-area" id="adm">
+        <div class="container-content adm-form-content">
+            <h3 class="section-title adm-title">• ADM: ADICIONAR PRODUTO •</h3>
+            
+            <div class="form-area adm-form-area">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="produto">Produto:</label>
+                        <input type="text" id="produto" name="produto">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descricao_sm">Descrição/SM:</label>
+                        <input type="text" id="descricao_sm" name="descricao_sm">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categoria">Categoria:</label>
+                        <input type="text" id="categoria" name="categoria">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group-textarea">
+                            <label for="descricao">Descrição:</label>
+                            <textarea id="descricao" name="descricao"></textarea>
+                        </div>
+
+                        <div class="form-group-select">
+                            <label for="nivel">Nível:</label>
+                            <select id="nivel" name="nivel">
+                                <option value="">Selecione</option>
+                                <option value="facil">Fácil</option>
+                                <option value="medio">Médio</option>
+                                <option value="dificil">Difícil</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-adicionar-adm">Adicionar Produto</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="gelatos-section">
+        <div class="container-content">
+            <h3 class="section-title">Gelatos</h3>
+
+            <div class="flavor-category">
+                <h4 class="category-title">Sabores Tradicionais</h4>
+                <div class="flavor-grid traditional-grid">
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem Sabor 1]</div>
+                        <p class="flavor-name">Melancia</p>
+                        <p class="flavor-price">R$ 9,99</p>
+                    </div>
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem Sabor 2]</div>
+                        <p class="flavor-name">Pistache P.</p>
+                        <p class="flavor-price">R$ 9,99</p>
+                    </div>
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem Sabor 3]</div>
+                        <p class="flavor-name">Manga</p>
+                        <p class="flavor-price">R$ 9,99</p>
+                    </div>
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem Sabor 4]</div>
+                        <p class="flavor-name">Nocciola</p>
+                        <p class="flavor-price">R$ 9,99</p>
+                    </div>
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem Sabor 5]</div>
+                        <p class="flavor-name">Matcha</p>
+                        <p class="flavor-price">R$ 9,99</p>
+                    </div>
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem Sabor 6]</div>
+                        <p class="flavor-name">Cioccolato</p>
+                        <p class="flavor-price">R$ 9,99</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flavor-category">
+                <h4 class="category-title">Sabores Africanos</h4>
+                <div class="flavor-grid african-grid">
+                    <div class="navigation-arrow left-arrow"></div>
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem African 1]</div>
+                    </div>
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem African 2]</div>
+                    </div>
+                    <div class="flavor-item central-cup">
+                        <div class="flavor-image">[Imagem Copo Central]</div>
+                    </div>
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem African 4]</div>
+                    </div>
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem African 5]</div>
+                    </div>
+                    <div class="navigation-arrow right-arrow"></div>
+                </div>
+            </div>
+
+            <div class="flavor-category">
+                <h4 class="category-title">Sabores Infantis</h4>
+                <div class="flavor-grid kids-grid">
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem Kids 1]</div>
+                        <p class="flavor-name">Unicórnio</p>
+                        <p class="flavor-price">R$ 9,99</p>
+                    </div>
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem Kids 2]</div>
+                        <p class="flavor-name">Algodão</p>
+                        <p class="flavor-price">R$ 9,99</p>
+                    </div>
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem Kids 3]</div>
+                        <p class="flavor-name">Banana Split</p>
+                        <p class="flavor-price">R$ 9,99</p>
+                    </div>
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem Kids 4]</div>
+                        <p class="flavor-name">Chocodile</p>
+                        <p class="flavor-price">R$ 9,99</p>
+                    </div>
+                    <div class="flavor-item">
+                        <div class="flavor-image">[Imagem Kids 5]</div>
+                        <p class="flavor-name">Napolitano</p>
+                        <p class="flavor-price">R$ 9,99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us-section">
+        <div class="container-content why-us-content">
+            <h3 class="section-title">• POR QUE NOS ESCOLHER •</h3>
+            <h4 class="why-us-subtitle title-cursive">Gelatos</h4>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <div class="section-stripes top-stripes"></div>
+        <div class="container-content">
+            <h3 class="section-title">Novidades</h3>
+            <h4 class="news-subtitle title-cursive">Gelato de Verão</h4>
+            <div class="news-grid">
+                 <div class="news-item">
+                    <div class="news-image">[Imagem Novidade 1]</div>
+                    <p class="news-price">R$ XX,XX</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-image">[Imagem Novidade 2]</div>
+                    <p class="news-price">R$ XX,XX</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-image">[Imagem Novidade 3]</div>
+                    <p class="news-price">R$ XX,XX</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-image">[Imagem Novidade 4]</div>
+                    <p class="news-price">R$ XX,XX</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-stripes bottom-stripes"></div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container-content contact-content">
+            <h3 class="section-title contact-title">• Contato •</h3>
+            <div class="contact-details-map">
+                <div class="contact-details">
+                    <ul>
+                        <li><span class="icon-placeholder">📍</span> Rua Doce Gourmet, 999 - Santo Augusto, Sede única</li>
+                        <li><span class="icon-placeholder">📞</span> #Telefone para ligações</li>
+                        <li><span class="icon-placeholder">📧</span> #Email para contato</li>
+                        <li><span class="icon-placeholder">📱</span> #Whatsapp para dúvidas</li>
+                    </ul>
+                </div>
+                <div class="contact-map-placeholder">
+                    [Imagem de Mapa]
+                </div>
+            </div>
+            <p class="contact-cta">
+                <span class="star-icon">★</span> Venha conhecer nossas lojas e descubra um novo jeito de se encantar com <span class="cursive-text">nossos gelatos gourmet!</span> <span class="star-icon">★</span>
+            </p>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        </footer>
+
+</body>
+</html>

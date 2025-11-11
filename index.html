@@ -1,80 +1,55 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gelato Gourmet</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Novo Produto</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="img/logo.png" alt="Doce Gourmet Logo">
+                <p>Doce Gourmet</p>
+            </div>
+            <h1>Adicionar novo produto</h1>
+        </div>
+        <div class="stripes"></div>
+    </header>
 
-  <!-- ======= CABEÇALHO ======= -->
-  <header>
-    <div class="logo"><img src="img/logo.png"></div>
-    <nav>
-      <a href="#inicio">GELATO</a>
-      <a href="#quemsomos">QUEM SOMOS</a>
-      <a href="#novidades">NOVIDADES</a>
-      <a href="#contato">CONTATO</a>
-      <span class="cart">🛒</span>
-    </nav>
-  </header>
+    <div class="container">
+        <main class="form-area">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="produto">Produto:</label>
+                    <input type="text" id="produto" name="produto">
+                </div>
 
-  <!-- ======= INÍCIO ======= -->
-  <section id="inicio" class="inicio">
-    <div class="texto">
-      <h2>Descubra o verdadeiro <br>sabor do gelato</h2>
-      <p>Feito com ingredientes selecionados,<br>diretamente para o seu paladar</p>
+                <div class="form-group">
+                    <label for="categoria">Categoria:</label>
+                    <input type="text" id="categoria" name="categoria">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group-textarea">
+                        <label for="descricao">Descrição:</label>
+                        <textarea id="descricao" name="descricao"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-adicionar">Adicionar</button>
+            </form>
+        </main>
     </div>
-  </section>
-
-  <!-- ======= SABORES ======= -->
-  <section id="sabores" class="sabores">
-    <h2>Gelatos</h2>
-
-    <h3>Sabores Tradicionais</h3>
-    <div class="sabores-grid">
-      <div class="sabor"><img src="img/sorvetes.jpeg"><p>Romeu e Julieta</p></div>
-    </div>
-
-
-    <h3>Sabores Infantis</h3>
-    <div class="sabores-grid">
-      <div class="sabor"><img src="img/confete.jpeg"><p>Confete</p></div>
-      <div class="sabor"><img src="img/unicorn.jpeg"><p>Unicorn</p></div>
-      <div class="sabor"><img src="img/algodão.jpeg"><p>Algodão Doce</p></div>
-      <div class="sabor"><img src="img/chocolate.jpeg"><p>Chocolate c/ M&M</p></div>
-      <div class="sabor"><img src="img/napolitano.jpeg"><p>Napolitano</p></div>
-    </div>
-  </section>
-
-  <!-- ======= QUEM SOMOS ======= -->
-  <section id="quemsomos" class="sobre">
-    <h2>Desde 2025<br>Gelatos</h2>
-    <p>Gelatos artesanais feitos com ingredientes selecionados para transformar cada momento em algo especial.
-      Oferecemos combinações clássicas e criações exclusivas para agradar todos os paladares, sempre com um toque italiano.</p>
-    <img src="https://images.unsplash.com/photo-1529946825183-b39a99f1322e?auto=format&fit=crop&w=900&q=80" alt="Gelato artesanal">
-  </section>
-
-  <!-- ======= NOVIDADES ======= -->
-  <section id="novidades" class="novidades">
-    <h2>Novidades</h2>
-    <p>Novos sabores chegam todo mês! Acompanhe nossas redes sociais para não perder nenhuma delícia.</p>
-    <img src="https://images.unsplash.com/photo-1627497593598-cdd0f4b142f2?auto=format&fit=crop&w=900&q=80" alt="Novos sabores">
-  </section>
-
-  <!-- ======= CONTATO ======= -->
-  <section id="contato" class="contato">
-    <h2>Contato</h2>
-    <p>📍 Rua do Sabor, 123 - São Paulo/SP</p>
-    <p>📞 (11) 99999-9999</p>
-    <p>📧 contato@gelatogourmet.com</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Gelato Gourmet | Todos os direitos reservados 🍨</p>
-  </footer>
-
+    
+    <footer class="footer"></footer>
 </body>
 </html>
+
+
+

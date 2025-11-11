@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso - Doce Gourmet</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="img/logo.png" alt="Doce Gourmet Logo">
+            </div>
+            <h1>Área de Acesso</h1>
+        </div>
+        <div class="stripes"></div>
+    </header>
+
+    <div class="container access-container">
+        
+        <main class="form-area login-form login-adm">
+            <h3 class="form-subtitle title-cursive">Acesso ADM</h3>
+            <form action="catalogo.html#adm" method="GET"> 
+                <div class="form-group">
+                    <label for="adm-email">Email ADM:</label>
+                    <input type="email" id="adm-email" name="email_adm" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adm-senha">Senha ADM:</label>
+                    <input type="password" id="adm-senha" name="senha_adm" required>
+                </div>
+
+                <button type="submit" class="btn-acessar">Acessar Painel ADM</button>
+            </form>
+        </main>
+        
+        <div class="separator-line">OU</div>
+
+        <main class="form-area login-form login-user">
+            <h3 class="form-subtitle title-cursive">Login de Usuário</h3>
+            <form action="catalogo.html" method="GET"> 
+                <div class="form-group">
+                    <label for="user-email">Seu Email:</label>
+                    <input type="email" id="user-email" name="email_user" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-senha">Sua Senha:</label>
+                    <input type="password" id="user-senha" name="senha_user" required>
+                </div>
+
+                <button type="submit" class="btn-acessar btn-user">Ver Catálogo</button>
+            </form>
+        </main>
+
+    </div>
+    
+    <footer class="footer"></footer>
+</body>
+</html>
+
+
+
+

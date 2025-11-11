@@ -1,0 +1,490 @@
+
+/* Variáveis de Cor (ajustadas para este layout) */
+:root {
+    --cor-rosa-claro: #f5c0c9;
+    --cor-azul-claro: #aed9e9;
+    --cor-azul-escuro: #1d5079;
+    --cor-texto-principal: #333;
+    --cor-texto-escuro: #1d5079;
+    --cor-listra-azul: #6fb0c9;
+    --cor-listra-branca: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #fff; /* Fundo branco geral */
+    line-height: 1.6;
+}
+
+/* Estilo para textos em fonte cursiva (Dancing Script) */
+.title-cursive, .cursive-text {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
+
+/* Centralização do conteúdo dentro das seções */
+.container-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Títulos de Seção Genéricos */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+
+/* --- 1. HEADER E NAV SUPERIOR --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #fff; /* Fundo branco do topo */
+    border-bottom: 1px solid #eee;
+    color: var(--cor-azul-escuro);
+    font-size: 0.9rem;
+}
+
+.header-logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-azul-escuro);
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: var(--cor-texto-escuro);
+    margin-left: 20px;
+}
+
+.social-icons img {
+    width: 20px;
+}
+
+/* --- 2. SEÇÃO DE APRESENTAÇÃO (HERO) --- */
+.hero-section {
+    background-color: var(--cor-azul-claro);
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    color: var(--cor-texto-escuro);
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    color: var(--cor-texto-principal);
+    width: 50%;
+    padding-right: 50px;
+}
+
+.hero-image-placeholder {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: flex-end; /* Alinha as imagens à direita */
+    align-items: flex-end;
+    gap: 20px;
+    margin-top: -100px; /* Sobrepõe o container superior */
+}
+/* Estilo Placeholder para as imagens (deixar no lugar certo) */
+.hero-image-placeholder > * {
+    background-color: rgba(255, 255, 255, 0.5); 
+    border: 2px dashed var(--cor-azul-escuro);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-azul-escuro);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+
+/* --- 3. SEÇÃO DE GELATOS (PRODUTOS) --- */
+.gelatos-section {
+    background-color: var(--cor-rosa-claro);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.gelatos-section .section-title {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+}
+
+.flavor-category {
+    margin-bottom: 50px;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: var(--cor-texto-escuro);
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.flavor-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.flavor-item {
+    width: 140px; /* Largura para cada item */
+    text-align: center;
+}
+
+.flavor-image {
+    width: 100%;
+    height: 140px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%; /* Imagens redondas */
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.flavor-name {
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+}
+
+.flavor-price {
+    font-size: 0.9rem;
+    color: var(--cor-texto-principal);
+}
+
+/* Layout específico para Sabores Africanos (Centralizados e Maior) */
+.african-grid {
+    gap: 10px;
+    align-items: flex-end;
+    position: relative;
+    padding: 0 50px; /* Espaço para as setas laterais */
+}
+
+.african-grid .flavor-item {
+    width: 100px; 
+    margin-top: 20px;
+}
+
+.african-grid .flavor-image {
+    height: 100px;
+    border: none;
+    background-color: transparent;
+}
+
+.central-cup {
+    width: 150px; /* Copo central maior */
+    transform: translateY(-20px); /* Levemente para cima */
+}
+
+.central-cup .flavor-image {
+    height: 180px; 
+    width: 150px;
+    background-color: rgba(255, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px dashed #f00;
+}
+
+.navigation-arrow {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    /* Para simular a seta */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.left-arrow { left: 5px; }
+.right-arrow { right: 5px; }
+
+
+/* --- 4. POR QUE NOS ESCOLHER --- */
+.why-us-section {
+    background-color: var(--cor-azul-claro);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.why-us-section .section-title {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.why-us-subtitle {
+    font-size: 3rem;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 20px;
+}
+
+.why-us-content p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--cor-texto-principal);
+}
+
+
+/* --- 5. SEÇÃO NOVIDADES --- */
+.news-section {
+    background-color: var(--cor-rosa-claro);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.news-section .section-title {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.news-subtitle {
+    font-size: 1.5rem;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 40px;
+}
+
+.section-stripes {
+    height: 10px; 
+    background: repeating-linear-gradient(
+        45deg,
+        var(--cor-listra-branca),
+        var(--cor-listra-branca) 3px,
+        var(--cor-listra-azul) 3px,
+        var(--cor-listra-azul) 6px
+    );
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+.top-stripes { top: 0; }
+.bottom-stripes { bottom: 0; }
+
+.news-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.news-item {
+    text-align: center;
+}
+
+.news-image {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.news-price {
+    font-weight: 700;
+    color: var(--cor-azul-escuro);
+}
+
+
+/* --- 6. SEÇÃO CONTATO --- */
+.contact-section {
+    background-color: var(--cor-azul-escuro);
+    color: white;
+    padding-bottom: 40px;
+}
+
+.contact-title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.contact-details-map {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.contact-details {
+    flex-basis: 50%;
+}
+
+.contact-details ul {
+    list-style: none;
+}
+
+.contact-details li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.icon-placeholder {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-map-placeholder {
+    flex-basis: 50%;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-azul-escuro);
+    font-size: 0.8rem;
+    border: 2px dashed var(--cor-rosa-claro);
+}
+
+.contact-cta {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.star-icon {
+    color: var(--cor-rosa-claro);
+    margin: 0 10px;
+}
+
+.cursive-text {
+    font-size: 1.3rem;
+}
+
+
+/* --- 7. RODAPÉ --- */
+.main-footer {
+    height: 50px;
+    background-color: var(--cor-azul-escuro); 
+}
+
+/* --- ADIÇÕES PARA ÁREA ADM DENTRO DO CATÁLOGO --- */
+
+/* 1. ESCONDE A ÁREA ADM POR PADRÃO */
+.adm-area {
+    display: none; 
+    background-color: var(--cor-azul-claro);
+    padding: 20px 0 50px;
+    border-bottom: 5px solid var(--cor-rosa-claro); 
+}
+
+/* 2. EXIBE A ÁREA ADM QUANDO A URL TIVER #adm (TRUQUE CSS) */
+.adm-area:target {
+    display: block; 
+}
+
+/* Estilização ADM Title */
+.adm-title {
+    font-size: 1.5rem;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 30px;
+}
+
+/* Container do Formulário ADM */
+.adm-form-content {
+    background-color: #fff;
+    max-width: 700px;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Copia estilos de formulário do index.html para o catalogo.html */
+.adm-form-area .form-group { margin-bottom: 15px; }
+.adm-form-area label { display: block; font-weight: 500; color: var(--cor-azul-escuro); margin-bottom: 5px; }
+.adm-form-area input[type="text"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; font-size: 1rem; }
+
+/* Linha de Duas Colunas (Descrição e Nível) */
+.adm-form-area .form-row { display: flex; gap: 20px; margin-bottom: 20px; }
+.adm-form-area .form-group-textarea { flex-basis: 70%; }
+.adm-form-area .form-group-select { flex-basis: 30%; }
+.adm-form-area textarea { width: 100%; height: 150px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; resize: none; font-size: 1rem; }
+.adm-form-area select { 
+    width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; 
+    -webkit-appearance: none; -moz-appearance: none; appearance: none;
+    font-size: 1rem;
+}
+
+/* Botão Adicionar ADM (usa cor do botão do index.html) */
+.btn-adicionar-adm {
+    background-color: var(--cor-azul-escuro);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: block;
+    width: 200px; 
+    margin: 30px auto 0 auto; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.btn-adicionar-adm:hover {
+    background-color: #2a689b;
+}
+/* 1. ESCONDE A ÁREA ADM POR PADRÃO */
+.adm-area {
+    display: none; /* Área ADM escondida */
+    /* ...outros estilos... */
+}
+
+/* 2. EXIBE A ÁREA ADM QUANDO A URL TIVER #adm (TRUQUE CSS) */
+/* Login ADM leva para catalogo.html#adm, que aciona esta regra */
+.adm-area:target {
+    display: block; 
+}
