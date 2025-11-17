@@ -47,31 +47,63 @@ body {
 
 /* --- 1. HEADER E NAV SUPERIOR --- */
 .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background-color: #fff; /* Fundo branco do topo */
-    border-bottom: 1px solid #eee;
-    color: var(--cor-azul-escuro);
-    font-size: 0.9rem;
+  width: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    #FFE6E8,
+    #FFE6E8 10px,
+    #FDD9DC 10px,
+    #FDD9DC 20px
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 20px 75px;
 }
 
-.header-logo {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--cor-azul-escuro);
+.header-logo img {
+  width: 500px;
+  height: auto;
+}
+
+.header-nav {
+  display: flex;
+  gap: 30px;
 }
 
 .header-nav a {
-    text-decoration: none;
-    color: var(--cor-texto-escuro);
-    margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  padding: 40px 0;
+}
+
+.header-nav a:hover {
+  color: #e91e63;
+}
+
+.header-social {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons {
+  display: inline-block;
 }
 
 .social-icons img {
-    width: 20px;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons:hover img {
+  transform: scale(1.1);
 }
 
 /* --- 2. SEÇÃO DE APRESENTAÇÃO (HERO) --- */
