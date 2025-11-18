@@ -1,22 +1,13 @@
-/* Importação das fontes */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
-/* Variáveis de cor (copiado de style.css para manter consistência) */
+/* Variáveis de Cor */
 :root {
     --cor-rosa-claro: #f5c0c9;
     --cor-azul-claro: #aed9e9;
-    --cor-azul-escuro-fundo: #87b9cc;
     --cor-azul-escuro: #1d5079;
-    --cor-listra-azul: #6fb0c9;
-    --cor-listra-branca: #ffffff;
-    --cor-texto-principal: #1d5079;
-    --cor-borda-campo: #ccc;
-    --cor-fundo-campo: #fff;
-    --cor-texto-claro: #fff;
+    --cor-listra-fundo-claro: #FFE6E8; /* Rosa bem claro */
+    --cor-listra-fundo-escuro: #FDD9DC; /* Rosa um pouco mais escuro */
+    --cor-fundo-rodape: #1d5079; 
 }
 
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -24,159 +15,129 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/* Página de login — sem listras e a "faixa azul clara" ocupa toda a viewport */
-body.login-page {
-    background-color: var(--cor-azul-escuro-fundo);
+body {
+    background-color: var(--cor-azul-claro);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    position: relative;
-    padding-top: 0; /* remove espaço para que o bloco azul ocupe toda a tela */
 }
 
-/* Remove listras apenas na página de login */
-body.login-page .stripes {
-    display: none;
-}
-
-/* Cabeçalho simplificado para login (mantém cores e logo) */
-.header {
-    background-color: var(--cor-rosa-claro);
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 20;
-    text-align: center;
-}
-.header-content {
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-.header h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
+/* Estilos de Tipografia */
+.title-cursive {
+    font-family: 'Dancing Script', cursive; 
     font-weight: 700;
-    color: var(--cor-azul-escuro);
-    line-height: 1.2;
 }
 
-/* Access container passa a preencher a tela inteira com o azul claro */
-.access-container {
+/* --- HEADER (Listras e Logo) --- */
+.header-login {
     width: 100%;
-    height: 100vh;
-    min-height: 100vh;
-    margin: 0;
-    padding: 80px 20px 40px; /* espaço superior para não ficar atrás do cabeçalho */
-    background-color: var(--cor-azul-claro);
-    border-radius: 0;
-    box-shadow: none;
+    height: 150px; 
+    /* Fundo listrado (Repetição vertical) */
+    background: repeating-linear-gradient(
+        90deg,
+        var(--cor-listra-fundo-claro),
+        var(--cor-listra-fundo-claro) 25px,
+        var(--cor-listra-fundo-escuro) 25px,
+        var(--cor-listra-fundo-escuro) 50px
+    );
+    padding: 0 50px; 
+    position: relative;
+}
+
+.header-logo {
+  /* NOVO: Tira a logo do fluxo normal e a coloca na posição absoluta */
+  position: absolute; 
+  right: 1200px; /* Posição à direita, mantendo o padding do header */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Ajuste fino para o centro vertical exato */
+}
+
+.header-logo img {
+  padding-top: 30px;
+  width: 400px; 
+  height: auto; 
+  display: block;
+}
+
+/* --- CONTEÚDO PRINCIPAL (FORMULÁRIO) --- */
+.main-content {
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* centraliza verticalmente o formulário */
-    z-index: 10;
+    justify-content: center; /* Centraliza verticalmente o bloco de login */
+    padding: 40px 20px;
 }
 
-/* Formulários de acesso - mantêm largura controlada dentro do bloco full-screen */
-.login-form {
+.login-form-container {
+    max-width: 450px;
     width: 100%;
-    max-width: 640px;
-    padding: 24px;
-    box-sizing: border-box;
-    background: transparent;
-}
-.login-adm {
-    border-bottom: 1px solid var(--cor-azul-escuro);
-}
-.login-user {
-    padding-top: 40px;
+    text-align: center;
 }
 
-/* Títulos do formulário */
-.form-title {
+/* Título Bem-Vindo */
+.welcome-title {
+    font-size: 3.5rem;
+    color: var(--cor-azul-escuro);
+    margin-bottom: 5px;
+}
+
+/* Subtítulo Gelateria Gourmet */
+.subtitle-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: var(--cor-azul-escuro);
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 25px; 
+}
+
+.form-group label {
+    font-size: 1.5rem;
+    color: var(--cor-azul-escuro);
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 500;
+}
+
+.input-field {
+    width: 100%;
+    padding: 18px 25px;
+    border: none;
+    border-radius: 50px; /* Campos de input arredondados */
+    font-size: 1.1rem;
+    background-color: white;
+    color: var(--cor-azul-escuro);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Botão Entrar */
+.login-button {
+    width: 250px; 
+    padding: 15px;
+    margin-top: 30px; 
+    background-color: var(--cor-rosa-claro); 
+    color: var(--cor-azul-escuro); 
+    border: none;
+    border-radius: 50px; /* Botão arredondado */
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--cor-azul-escuro);
-    text-align: center;
-    padding: 0 0 12px 0;
-}
-.form-subtitle {
-    font-size: 2rem;
-    color: var(--cor-texto-principal);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Separador "OU" */
-.separator-line {
-    font-weight: 700;
-    color: var(--cor-azul-escuro);
-    padding: 10px 0;
-    margin: 0 auto;
-    background-color: transparent;
-    position: relative;
-    z-index: 10;
-}
-
-/* Inputs */
-.form-group input[type="email"],
-.form-group input[type="password"],
-.form-group input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--cor-borda-campo);
-    border-radius: 5px;
-    background-color: var(--cor-fundo-campo);
-    font-size: 1rem;
-}
-
-/* Botões (acessar / cadastrar) */
-.btn-acessar,
-.btn-cadastrar {
-    background-color: var(--cor-azul-escuro);
-    color: var(--cor-texto-claro);
-    border: none;
-    padding: 12px 30px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: 500;
     cursor: pointer;
-    display: block;
-    width: 250px;
-    margin: 20px auto 0 auto;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: background-color 0.3s;
-}
-.btn-acessar:hover,
-.btn-cadastrar:hover {
-    background-color: #2a689b;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* Link para alternar entre login/cadastro */
-.login-form .switch-link,
-.register-form .switch-link {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--cor-texto-principal);
-}
-.login-form .switch-link a,
-.register-form .switch-link a {
-    color: var(--cor-rosa-claro);
-    font-weight: 700;
-    text-decoration: none;
+.login-button:hover {
+    background-color: #f7d8e0;
 }
 
-/* Ajustes responsivos simples */
-@media (max-width: 560px) {
-    .access-container { padding: 20px 12px; justify-content: flex-start; }
-    .login-form { padding: 16px; }
-    .btn-acessar, .btn-cadastrar { width: 100%; }
-    .header h1 { font-size: 2.2rem; }
+/* --- RODAPÉ --- */
+.main-footer {
+    height: 30px;
+    background-color: var(--cor-fundo-rodape); 
+    width: 100%;
 }

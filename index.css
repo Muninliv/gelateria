@@ -1,0 +1,180 @@
+/* Variáveis de Cor, mantendo o padrão do catálogo */
+:root {
+    --cor-rosa-claro: #f5c0c9;
+    --cor-azul-claro: #aed9e9;
+    --cor-azul-escuro: #1d5079;
+    --cor-listra-fundo-claro: #FFE6E8; /* Rosa bem claro */
+    --cor-listra-fundo-escuro: #FDD9DC; /* Rosa um pouco mais escuro */
+    --cor-rodape-botao: #1d5079; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--cor-azul-claro);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos de Tipografia */
+.title-cursive {
+    font-family: 'Dancing Script', cursive; 
+    font-weight: 700;
+}
+
+/* --- HEADER ADM (Listras e Título) --- */
+.header-adm {
+    width: 100%;
+    height: 150px; 
+    /* Fundo listrado (Repetição vertical) */
+    background: repeating-linear-gradient(
+        90deg,
+        var(--cor-listra-fundo-claro),
+        var(--cor-listra-fundo-claro) 25px,
+        var(--cor-listra-fundo-escuro) 25px,
+        var(--cor-listra-fundo-escuro) 50px
+    );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px; 
+    position: relative;
+}
+
+.header-logo {
+  /* NOVO: Tira a logo do fluxo normal e a coloca na posição absoluta */
+  position: absolute; 
+  right: 1200px; /* Posição à direita, mantendo o padding do header */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Ajuste fino para o centro vertical exato */
+}
+
+.header-logo img {
+  padding-top: 30px;
+  width: 400px; 
+  height: auto; 
+  display: block;
+}
+
+
+.header-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    color: var(--cor-azul-escuro);
+    white-space: nowrap;
+}
+
+/* --- CONTEÚDO PRINCIPAL (FORMULÁRIO) --- */
+.main-content {
+    flex-grow: 1; /* Ocupa o espaço restante */
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    color: var(--cor-azul-escuro);
+    margin-bottom: 5px;
+}
+
+/* Estilo para todos os campos de texto e seleção */
+.text-input, .select-input {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: var(--cor-texto-escuro);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.select-input {
+    appearance: none; /* Remove o estilo padrão de seta */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="%231d5079" d="M5 6l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+/* Layout dos campos Imagem e Valor (Lado a Lado) */
+.half-fields-wrapper {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.image-field, .value-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-field {
+    flex-basis: 60%; /* Ocupa mais espaço para o placeholder da imagem */
+}
+
+.value-field {
+    flex-basis: 40%;
+}
+
+/* Placeholder da Imagem (Caixa Branca Grande) */
+.image-placeholder {
+    width: 100%;
+    height: 250px; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-texto-principal);
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+/* Botão Adicionar */
+.add-button {
+    display: block;
+    width: 300px;
+    padding: 15px;
+    margin: 40px auto 0 auto;
+    background-color: var(--cor-rodape-botao); 
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.add-button:hover {
+    background-color: #153c58;
+}
+
+/* --- RODAPÉ --- */
+.main-footer {
+    height: 30px;
+    background-color: var(--cor-rodape-botao); 
+    width: 100%;
+}
