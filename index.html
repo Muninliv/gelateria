@@ -1,55 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Novo Produto</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ADM - Adicionar Produto</title>
+    <link rel="stylesheet" href="index.css"> 
+    <!-- Fontes usadas no design (Dancing Script para títulos cursivos e Roboto para o corpo) -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">
-                <img src="img/logo.png" alt="Doce Gourmet Logo">
-                <p>Doce Gourmet</p>
-            </div>
-            <h1>Adicionar novo produto</h1>
+
+    <header class="header-adm">
+        <!-- Logo -->
+        <div class="header-logo">
+            <!-- Placeholder para o logo -->
+            <img src="img/logo.png" alt="Gelato Gourmet Logo">
         </div>
-        <div class="stripes"></div>
+        
+        <!-- Título do Header -->
+        <h1 class="header-title title-cursive">Adicionar novo produto</h1>
     </header>
 
-    <div class="container">
-        <main class="form-area">
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="produto">Produto:</label>
-                    <input type="text" id="produto" name="produto">
+    <main class="main-content">
+        <form>
+            <!-- Campo Produto -->
+            <div class="form-group">
+                <label for="produto">Produto:</label>
+                <input type="text" id="produto" class="text-input" placeholder="Digite o nome do produto..." required>
+            </div>
+
+            <!-- Campo Descrição -->
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" class="text-input" placeholder="Descreva brevemente o produto..." required>
+            </div>
+
+            <!-- Campo Categoria -->
+            <div class="form-group">
+                <label for="categoria">Categoria:</label>
+                <input type="text" id="categoria" class="text-input" placeholder="Ex: Tradicional, Alcóolico, Infantil..." required>
+                <!-- Poderia ser um <select> se as categorias fossem fixas, mas mantive o <input> conforme o espaço na imagem -->
+            </div>
+
+            <!-- Campos Imagem e Valor (Lado a Lado) -->
+            <div class="half-fields-wrapper">
+                <!-- Campo Imagem -->
+                <div class="image-field">
+                    <label for="imagem">Imagem:</label>
+                    <!-- Área grande e branca para a imagem -->
+                     <form action="/upload" method="post" enctype="multipart/form-data">
+                     <input type="file" id="arquivo" name="arquivo">
+        <br><br>
+        <input type="submit" value="Enviar Arquivo">
+    </form>
+
                 </div>
 
-                <div class="form-group">
-                    <label for="categoria">Categoria:</label>
-                    <input type="text" id="categoria" name="categoria">
+                <!-- Campo Valor -->
+                <div class="value-field">
+                    <label for="valor">Valor:</label>
+                    <select id="valor" class="select-input" required>
+                        <option value="" disabled selected>Escolha um valor</option>
+                        <option value="29">R$ 29,99</option>
+                        <option value="35">R$ 35,90</option>
+                        <option value="49">R$ 49,90</option>
+                    </select>
                 </div>
-                
-                <div class="form-row">
-                    <div class="form-group-textarea">
-                        <label for="descricao">Descrição:</label>
-                        <textarea id="descricao" name="descricao"></textarea>
-                    </div>
-                </div>
+            </div>
 
-                <button type="submit" class="btn-adicionar">Adicionar</button>
-            </form>
-        </main>
-    </div>
-    
-    <footer class="footer"></footer>
+            <!-- Botão Adicionar -->
+            <button type="submit" class="add-button">Adicionar</button>
+        </form>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Rodapé simples na cor azul escura -->
+    </footer>
+
 </body>
 </html>
-
-
 

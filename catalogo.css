@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: var(--cor-azul-claro); /* Fundo branco geral */
+    background-color: #aed9e9; /* Fundo azul claro geral */
     line-height: 1.6;
 }
 
@@ -50,18 +50,18 @@ body {
   background: repeating-linear-gradient(
     90deg,
     #FFE6E8,
-    #FFE6E8 10px,
-    #FDD9DC 10px,
-    #FDD9DC 20px
+    #FFE6E8 20px,
+    #FDD9DC 20px,
+    #FDD9DC 40px
   );
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   z-index: 1000;
-  padding: 10px 75px; /* Reduza o padding vertical aqui */
-  padding-left: 500px;
-  height: 120px;
+  padding: 10px 75px; 
+  padding-left: 930px;
+  height: 130px;
   /* Adicione position: relative para que .header-logo fique posicionado em relação a ele */
   position: relative;
 }
@@ -69,18 +69,15 @@ body {
 .header-logo {
   /* NOVO: Tira a logo do fluxo normal e a coloca na posição absoluta */
   position: absolute; 
-  left: -75px; /* Posição à esquerda, mantendo o padding do header */
+  right: 1200px; /* Posição à direita, mantendo o padding do header */
   top: 50%; /* Centraliza verticalmente */
   transform: translateY(-50%); /* Ajuste fino para o centro vertical exato */
 }
 
 .header-logo img {
-  /* Reduza o tamanho da imagem da logo para algo mais razoável */
-  padding-top: 23px;
-  width: 350px; 
+  padding-top: 30px;
+  width: 400px; 
   height: auto; 
-  
-  /* Adicione `display: block` se a imagem estiver causando um pequeno espaço inferior */
   display: block;
 }
 
@@ -97,12 +94,11 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   transition: color 0.3s ease;
-  /* Altere o padding dos links para acomodar o novo tamanho */
   padding: 15px 0; 
 }
 
 .header-nav a:hover {
-  color: #e91e63;
+  color: #f4b2bd;
 }
 
 .header-social {
@@ -128,6 +124,55 @@ body {
 .hero-section {
     background-color: var(--cor-azul-claro);
     padding: 60px 20px;
+    /* Define o container de referência para os elementos absolutos */
+    position: relative; 
+    
+    /* Outros estilos como altura, cor de fundo, etc. */
+    height: 400px;
+    background-color: #aed9e9;
+    overflow: hidden; /* Garante que nada saia do container */
+}
+
+.ice-cream-container {
+    /* Posiciona o grupo inteiro à direita da tela */
+    position: absolute;
+    top: -100px; /* Ajuste a altura do grupo na seção */
+    right: 50px; /* Ajuste a distância da direita */
+    width: 300px; /* Largura aproximada do grupo */
+    height: 400px; /* Altura aproximada do grupo */
+}
+
+.ice-cream {
+    /* Todos os sorvetes devem ser posicionados absolutamente */
+    position: absolute;
+    width: 800px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    
+    /* Garante que o sorvete de cima não fique por baixo dos outros, se houver sobreposição */
+    z-index: 10; 
+}
+
+/*  Posicionamento Individual (Ajuste fino) */
+
+.top-cup {
+    /* Sorvete do topo */
+    top: -43px;
+    right: 17px;
+    transform: rotate(6deg);
+}
+
+.middle-cup {
+    /* Sorvete do meio, um pouco para baixo e para a esquerda */
+    top: 100px; /* Desce um pouco em relação ao topo */
+    right: 50px; /* Desloca para a esquerda */
+    transform: rotate(4deg); /* Adiciona uma leve inclinação */
+}
+
+.bottom-cup {
+    /* Sorvete de baixo, mais para baixo e para a esquerda */
+    top: 140px; /* Desce mais */
+    right: 50px; /* Desloca mais para a esquerda */
+    transform: rotate(-8deg); /* Adiciona inclinação na direção oposta */
 }
 
 .hero-content {
@@ -144,6 +189,13 @@ body {
     color: var(--cor-texto-escuro);
     width: 50%;
     margin-bottom: 10px;
+}
+
+.subtitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    color: var(--cor-azul-escuro);
+    margin-left: 240px;
 }
 
 .hero-content p {
@@ -187,6 +239,7 @@ body {
 }
 
 .gelatos-section .section-title {
+    
     font-size: 3.5rem;
     margin-bottom: 40px;
 }
@@ -211,26 +264,35 @@ body {
 }
 
 .flavor-item {
-    width: 140px; /* Largura para cada item */
+    width: 160px; /* Largura para cada item */
     text-align: center;
 }
 
 .flavor-image {
-    width: 100%;
-    height: 140px;
+    width: 160px; /* Tamanho da caixa da imagem, igual à largura do item */
+    height: 160px; /* Torna a caixa quadrada para fazer um círculo perfeito */
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%; /* Imagens redondas */
+    border-radius: 50%; /* Faz a caixa redonda */
     border: 1px solid #ddd;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
+    overflow: hidden; /* **IMPORTANTE**: Garante que a imagem seja cortada para o círculo */
+}
+
+.flavor-image img {
+    width: 100%; /* A imagem preenche a largura da caixa */
+    height: 100%; /* A imagem preenche a altura da caixa */
+    object-fit: cover; /* **IMPORTANTE**: Faz a imagem cobrir o espaço sem distorcer, cortando se necessário */
+    border-radius: 50%; /* Garante que a imagem em si seja redonda */
 }
 
 .flavor-name {
-    font-weight: 700;
+font-weight: 700;
     color: var(--cor-texto-escuro);
+    margin-top: 5px; /* Adiciona um pequeno espaçamento */
 }
 
 .flavor-price {
@@ -238,20 +300,20 @@ body {
     color: var(--cor-texto-principal);
 }
 
-/* Layout específico para Sabores Africanos (Centralizados e Maior) */
-.african-grid {
+/* Layout específico para Sabores alcóolicoa (Centralizados e Maior) */
+.alcohol-grid {
     gap: 10px;
     align-items: flex-end;
     position: relative;
     padding: 0 50px; /* Espaço para as setas laterais */
 }
 
-.african-grid .flavor-item {
+.alcohol-grid .flavor-item {
     width: 100px; 
     margin-top: 20px;
 }
 
-.african-grid .flavor-image {
+.alcohol-grid .flavor-image {
     height: 100px;
     border: none;
     background-color: transparent;
@@ -338,19 +400,26 @@ body {
 }
 
 .section-stripes {
-    height: 10px; 
-    background: repeating-linear-gradient(
-        45deg,
-        var(--cor-listra-branca),
-        var(--cor-listra-branca) 3px,
-        var(--cor-listra-azul) 3px,
-        var(--cor-listra-azul) 6px
-    );
-    width: 100%;
-    position: absolute;
-    z-index: 2;
+  width: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    #FFE6E8,
+    #FFE6E8 20px,
+    #FDD9DC 20px,
+    #FDD9DC 40px
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 10px 75px; 
+  padding-left: 930px;
+  height: 130px;
+  /* Adicione position: relative para que .header-logo fique posicionado em relação a ele */
+  position: relative;
 }
-.top-stripes { top: 0; }
+
 .bottom-stripes { bottom: 0; }
 
 .news-grid {
@@ -385,7 +454,7 @@ body {
 
 /* --- 6. SEÇÃO CONTATO --- */
 .contact-section {
-    background-color: var(--cor-azul-escuro);
+    background-color: var(--cor-rosa-claro);
     color: white;
     padding-bottom: 40px;
 }
@@ -441,13 +510,8 @@ body {
     font-size: 1.2rem;
     max-width: 800px;
     margin-left: auto;
-    margin-right: -60px;
-}
-
-.star-icon {
-    color: var(--cor-rosa-claro);
-    margin: 0 10px;
-}
+    margin-right: auto;
+} 
 
 .cursive-text {
     font-size: 1.3rem;
@@ -456,7 +520,7 @@ body {
 
 /* --- 7. RODAPÉ --- */
 .main-footer {
-    height: 50px;
+    height: 30px;
     background-color: var(--cor-azul-escuro); 
 }
 
